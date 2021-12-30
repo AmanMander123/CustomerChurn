@@ -7,24 +7,24 @@ In this project, we use machine learning to predict customer churn using bank da
 
 
 ## Running Files
-The files can be directly from the terminal using the following commands:
+The files can be directly from the terminal using the following commands:  
 
-pip install -r requirements.txt
+pip install -r requirements.txt  
 python churn_library.py
 
-By running the commands above, the following directories should be populated:
+By running the commands above, the following directories should be populated:  
 
-images/eda
-images/results
-models
+images/eda  
+images/results  
+models  
 
-To run the tests, use the following command in the terminal:
+To run the tests, use the following command in the terminal:  
 
-python churn_script_logging_and_tests.py
+python churn_script_logging_and_tests.py  
 
-By running the command above, the following directory should be populated:
+By running the command above, the following directory should be populated:  
 
-logs
+logs  
 
 
 
