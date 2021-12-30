@@ -52,24 +52,36 @@ def perform_eda(df):
     # create and save histogram for Churn
     plt.figure(figsize=(20, 10))
     df['Churn'].hist()
+    plt.title('Churn Distribution')
+    plt.xlabel('Churn')
+    plt.ylabel('Count')
     plt.savefig('./images/eda/churn_histogram.png')
     plt.close()
 
     # create and save histogram for Customer_Age
     plt.figure(figsize=(20, 10))
     df['Customer_Age'].hist()
+    plt.title('Customer Age Distribution')
+    plt.xlabel('Customer Age')
+    plt.ylabel('Count')
     plt.savefig('./images/eda/customer_age_histogram.png')
     plt.close()
 
     # create and save histogram for Marital_Status
     plt.figure(figsize=(20, 10))
     df.Marital_Status.value_counts('normalize').plot(kind='bar')
+    plt.title('Marital Status Distribution')
+    plt.xlabel('Churn')
+    plt.ylabel('Proportion of total')
     plt.savefig('./images/eda/marital_status_histogram.png')
     plt.close()
 
     # create and save histogram for Total_Trans_Ct
     plt.figure(figsize=(20, 10))
     sns.distplot(df['Total_Trans_Ct'])
+    plt.title('Total_Trans_Ct Distribution')
+    plt.xlabel('Total_Trans_Ct')
+    plt.ylabel('Density')
     plt.savefig('./images/eda/total_trans_ct_histogram.png')
     plt.close()
 
@@ -191,7 +203,7 @@ def classification_report_image(y_train,
 
     # Random Forest report
     plt.figure()
-    plt.rc('figure', figsize=(5, 5))
+    plt.rc('figure', figsize=(8, 8))
     plt.text(0.01, 1.25, str('Random Forest Train'), {'fontsize': 10}, fontproperties='monospace')
     plt.text(0.01, 0.05, str(classification_report(y_test, y_test_preds_rf)), {'fontsize': 10},
              fontproperties='monospace')  # approach improved by OP -> monospace!
@@ -204,7 +216,7 @@ def classification_report_image(y_train,
 
     # Logistic Regression report
     plt.figure()
-    plt.rc('figure', figsize=(5, 5))
+    plt.rc('figure', figsize=(8, 8))
     plt.text(0.01, 1.25, str('Logistic Regression Train'), {'fontsize': 10}, fontproperties='monospace')
     plt.text(0.01, 0.05, str(classification_report(y_train, y_train_preds_lr)), {'fontsize': 10},
              fontproperties='monospace')  # approach improved by OP -> monospace!
